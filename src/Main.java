@@ -1,28 +1,21 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        int arr[] = {5,4,7,2,8,1,3};
+    public static void main(String[]arg){
 
-        System.out.print("Original Array is: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(" " + arr[i]);
-        }
+        int arr[] = {5,4,7,3,8,2};
 
-        int temp =0;
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = i +1; j < arr.length; j++) {
-                if (arr[j] < arr[i]) {
+        int temp = 0;
+        for (int i = 0; i< arr.length; i++){
+            for (int j = i+1; j< arr.length; j++){
+                if (arr[j] < arr[i]){
                     temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
+
                 }
             }
         }
-        System.out.print("\nSorted Array is: ");
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(" " + arr[i]);
+        for (int i = 0; i< arr.length; i++){
+            System.out.print(arr[i]);
         }
-
     }
 }
